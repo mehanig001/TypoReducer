@@ -22,8 +22,8 @@ body{
     text-align: center;
    
     border-radius: 20px;
-    border: 2px solid black;
-    background: rgb(132, 158, 163);
+    /* border: 2px solid black; */
+    /* background: white */
     width: 20rem;
     margin: auto;
     margin-bottom: 70px;
@@ -34,7 +34,7 @@ body{
 .Main{
     width: 770px;
     padding: 35px;
-    background: rgb(142, 147, 131);
+    background: white;
     border-radius: 10px;
 }
 
