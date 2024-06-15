@@ -1,0 +1,184 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: coral;
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+}
+
+.Heading{
+    text-align: center;
+   
+    border-radius: 20px;
+    border: 2px solid black;
+    background: rgb(132, 158, 163);
+    width: 20rem;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+
+
+.Main{
+    width: 770px;
+    padding: 35px;
+    background: rgb(142, 147, 131);
+    border-radius: 10px;
+}
+
+.Main .InputLeLo{
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+}
+
+.Main .ContentBox{
+
+    padding: 13px 20px 0px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+
+}
+
+.ContentBox .TypingArea{
+    max-height: 255px;
+    overflow-y: auto;
+}
+
+.ContentBox .TypingArea::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+.TypingArea p{
+    font-size: 21px;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-break: break-all;
+
+}
+
+.TypingArea p span{
+    position: relative;
+}
+
+.TypingArea p span.active{
+    color: #17a2b8;
+}
+
+.TypingArea p span.active::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px ;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    border-radius: 5px;
+    background: #17a2b8;
+    animation: blink 1s ease-in-out infinite;
+    
+}
+@keyframes blink {
+    50%{
+        opacity: 1;
+    }
+}
+
+
+.TypingArea p .correct{
+    color: lightgreen;
+}
+
+
+
+.TypingArea p .incorrect{
+    color: rgb(249, 42, 42);
+    background: #ffc0bc;
+    outline: 1px solid white;
+    border-radius: 4px;
+}
+
+.ContentBox .Content{
+    display: flex;
+    margin-top: 17px;
+    padding: 12px 0;
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Content button{
+    border: none;
+    outline: none;
+    width: 100px;
+    padding: 8px 0;
+    background: coral;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px; 
+    transition: transform 0.3s  ease;
+
+}
+
+.Content button:active{
+    transform: scale(0.97);
+}
+
+
+.Content .Output{
+    width: calc(100% - 120px);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Output li{
+    height: 22px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.Output li:not(:first-child){
+    padding-left: 22px;
+    border-left: 1px solid #ccc;
+}
+
+
+
+
+.Output li p{
+    font-size: 19px;
+}
+
+
+.Output li span{
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+
+
+}
+
+.Output li:not(:first-child) span{
+    font-weight: 500;
+}
+
+.Output li b{
+    font-weight: 500;
+}
+
