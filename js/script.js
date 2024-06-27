@@ -103,8 +103,18 @@ function reset(){
     inputArea.value = "";
     clearInterval(timer);
 
+    
+
 }
 
 randomPara();
 inputArea.addEventListener("input", initTyping);
 tryAgain.addEventListener("click", reset);
+
+
+document.getElementById("myDiv").onmousemove = function() {
+    //Set random background color
+    
+    myDiv.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
+    
+}

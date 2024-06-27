@@ -32,7 +32,7 @@ body{
 
 
 .Main{
-    width: 770px;
+    width: 70vw;
     padding: 35px;
     background: white;
     border-radius: 10px;
@@ -140,8 +140,9 @@ body{
 
 
 .Content .Output{
-    width: calc(100% - 120px);
+    width: fit-content;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 
 }
@@ -182,3 +183,6 @@ body{
     font-weight: 500;
 }
 
+#myDiv{
+    transition: 0.5s;
+}
